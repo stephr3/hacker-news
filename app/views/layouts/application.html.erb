@@ -13,7 +13,7 @@
     <%= flash[:alert] %>
     <%= flash[:notice] %>
     <div class="orange-title">
-      <h4><%= image_tag "logo.gif", class: "logo" %>Hacker News</h4>
+      <h4><a href="/links"><%= image_tag "logo.gif", class: "logo" %></a>Hacker News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="navigation-links"><%= link_to "submit", new_link_path %></span></h4>
     </div>
     <div class="body-container">
       <%= yield %>

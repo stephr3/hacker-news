@@ -5,7 +5,7 @@
   <ol>
     <% @links.each do |link| %>
       <li><%= image_tag "upvote.png", class: "votearrow" %><%= link_to link.title, link.url %> <span class="source">(<%= link.source %>)</span>
-      <p><span class="link-details"><%= time_ago_in_words(link.created_at) %> ago</span><p></li>
+      <p><span class="link-details"><%=link.points %> points by <%=link.username %> <%= time_ago_in_words(link.created_at) %> ago</span><p></li>
     <% end %>
   </ol>
 <!-- </div> -->
