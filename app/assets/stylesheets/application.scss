@@ -3,7 +3,11 @@
 
 $burnt: #ff6600;
 $yellowish: #f6f6ef;
+$gray: #828282;
 
+body {
+  font-size: 1.8em;
+}
 .orange-title {
   background-color: $burnt;
   max-width: 90%;
@@ -20,8 +24,52 @@ $yellowish: #f6f6ef;
   background-color: $yellowish;
   max-width: 90%;
   margin: -8px auto;
-  height: 90vh;
+  height: 95vh;
   ol {
-    margin-top: 0;
+    margin: 10px 0 auto -25px;
+    counter-reset: item;
+    li {
+      display: block;
+      p{
+        margin-top: -8px;
+        margin-left: 35px;
+      }
+    }
+    li:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      color: $gray;
+    }
   }
+}
+
+.votearrow {
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  margin: 3px 2px 6px;
+}
+
+a, a:hover, a:focus {
+  color:black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.source {
+  color: $gray;
+  font-size: .8em;
+}
+
+.link-details {
+  color: $gray;
+  font-size: .7em;
+}
+
+.logo {
+  border: solid white 2px;
+  margin-right: 5px;
 }

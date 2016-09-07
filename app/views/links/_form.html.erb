@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @link %>
+
+<%= form_for @link do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username,  class: "form-control"%>
+  <%= f.label :title %>
+  <%= f.text_field :title,  class: "form-control"%>
+  <%= f.label :url %>
+  <%= f.text_field :url,  class: "form-control"%>
+  <%= f.label :source %>
+  <%= f.text_field :source,  class: "form-control"%>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
