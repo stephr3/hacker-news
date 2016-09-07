@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def index
-    @links = Link.all
+    @links = Link.all.order(points: :desc)
   end
 
   def new
@@ -18,8 +18,15 @@ class LinksController < ApplicationController
     end
   end
 
+  def update
+    @link = Link.find(params[:id])
+    if @link.update(link_params)
+      redirect_to links_path
+    end
+  end
+
 private
   def link_params
-    params.require(:link).permit(:title, :url, :source, :username)
+    params.require(:link).permit(:title, :url, :source, :username, :points)
   end
 end

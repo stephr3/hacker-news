@@ -43,11 +43,11 @@ body {
   }
 }
 
-.votearrow {
+.votearrow  {
   width: 10px;
   height: 10px;
   border: 0px;
-  margin: 3px 2px 6px;
+  margin: 3px 2px 2px;
 }
 
 a, a:hover, a:focus {
@@ -74,7 +74,7 @@ a:hover {
   margin-right: 5px;
 }
 
-form {
+.new-form {
   padding: 10px;
 }
 .btn-primary {
@@ -95,4 +95,8 @@ form {
 .navigation-links {
   font-size: .8em;
   font-weight: 500;
+}
+
+.edit_link {
+  display: inline;
 }
