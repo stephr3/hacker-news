@@ -11,7 +11,12 @@
 
   <body>
     <%= flash[:alert] %>
-     <%= flash[:notice] %>
-    <%= yield %>
+    <%= flash[:notice] %>
+    <div class="orange-title">
+      <h4><%= image_tag "logo.gif", class: "logo" %>Hacker News</h4>
+    </div>
+    <div class="body-container">
+      <%= yield %>
+    </div>
   </body>
 </html>

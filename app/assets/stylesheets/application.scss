@@ -73,3 +73,20 @@ a:hover {
   border: solid white 2px;
   margin-right: 5px;
 }
+
+form {
+  padding: 10px;
+}
+.btn-primary {
+  background-color: $burnt;
+  border-color: white;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: $burnt;
+}
+
+.new-title {
+  padding: 15px;
+}
