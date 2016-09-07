@@ -1,2 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$burnt: #ff6600;
+$yellowish: #f6f6ef;
+
+.orange-title {
+  background-color: $burnt;
+  max-width: 90%;
+  margin: auto;
+  h4 {
+    margin-bottom: 0;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.body-container {
+  background-color: $yellowish;
+  max-width: 90%;
+  margin: -8px auto;
+  height: 90vh;
+  ol {
+    margin-top: 0;
+  }
+}
