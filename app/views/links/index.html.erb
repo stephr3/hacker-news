@@ -13,7 +13,7 @@
         <%= link_to link.title, link.url %>
         <span class="source">(<%= link.source %>)</span>
         <p>
-          <span class="link-details"><%=link.points %> points by <%=link.username %> <%= time_ago_in_words(link.created_at) %> ago</span>
+          <span class="link-details"><%=link.points %> points by <%=link.username %> <%= time_ago_in_words(link.created_at) %> ago | <a href="/links/<%= link.id %>"><%= link.comments.length %> comments</a></span>
         <p>
       </li>
     <% end %>

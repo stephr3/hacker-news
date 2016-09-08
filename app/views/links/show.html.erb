@@ -1,0 +1,26 @@
+<div class="main-content">
+  <%= form_for @link do |f|%>
+  <%= f.hidden_field :points, :value => @link.points + 1 %>
+  <%= image_submit_tag "upvote.png", :class => "votearrow" %>
+  <% end %>
+  <%= link_to @link.title, @link.url %>
+  <span class="source">(<%= @link.source %>)</span>
+  <p>
+    <span class="link-details"><%=@link.points %> points by <%=@link.username %> <%= time_ago_in_words(@link.created_at) %> ago</span>
+    <p>
+      <%= link_to "add comment", new_link_comment_path(@link), class: "btn btn-primary" %>
+      <br>
+      <% if @link.comments.any? %>
+      <h4>Comments:</h4>
+      <ul>
+        <% @link.comments.each do |comment| %>
+        <li>
+          <%= comment.body %> <%= time_ago_in_words(comment.created_at) %> ago
+        </li>
+        <% end %>
+      </ul>
+      <% else %>
+      <p>There are no comments yet!</p>
+      <% end %>
+
+</div>

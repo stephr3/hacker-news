@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @comment) %>
+
+<%= form_for [@link, @comment] do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username, class: "form-control" %>
+<%= f.label :body %>
+<%= f.text_area :body, class: "form-control" %>
+<p><%= f.submit class: "btn btn-primary" %></p>
+<% end %>

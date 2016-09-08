@@ -74,8 +74,9 @@ a:hover {
   margin-right: 5px;
 }
 
-.new-form {
+.main-content {
   padding: 10px;
+  margin-top: 7px;
 }
 .btn-primary {
   background-color: $burnt;
@@ -99,4 +100,15 @@ a:hover {
 
 .edit_link {
   display: inline;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
 }

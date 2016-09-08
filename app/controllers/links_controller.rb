@@ -11,7 +11,7 @@ class LinksController < ApplicationController
     @link = Link.new(link_params)
     if @link.save
       flash[:notice] = "Link successfully added!"
-      redirect_to links_path
+      redirect_to :back
     else
       flash[:alert] = "Link not added"
       render :new
@@ -21,12 +21,17 @@ class LinksController < ApplicationController
   def update
     @link = Link.find(params[:id])
     if @link.update(link_params)
-      redirect_to links_path
+      redirect_to :back
     end
+  end
+
+  def show
+    @link = Link.find(params[:id])
+    # @comment = @link.comments.new
   end
 
 private
   def link_params
-    params.require(:link).permit(:title, :url, :source, :username, :points, :score)
+    params.require(:link).permit(:title, :url, :source, :username, :points)
   end
 end
