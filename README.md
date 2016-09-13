@@ -1,24 +1,54 @@
-# README
+#  Hacker News Clone
+## *By Stephanie Gurung & Meaghan Jones*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_A clone of hacker news, complete with upvotes and commenting._
 
-Things you may want to cover:
+## Technologies Used
 
-* Ruby version
+* **Application**: *Ruby on Rails 5*<br>
+* **Testing**: *Rspec, Capybara*<br>
+* **Database**: *Postgres, ActiveRecord*
 
-* System dependencies
+Installation
+------------
 
-* Configuration
+Install *Hacker News Clone* by cloning the repository.  
+```
+$ git clone https://github.com/stephr3/hacker-news
+```
 
-* Database creation
+Check to make sure ruby and rails are installed on your machine.  
+```
+$ ruby -v
+$ rails -v
+```
+If they are not installed, please follow instructions [here](http://guides.rubyonrails.org/getting_started.html#installing-rails) to install ruby on rails.
 
-* Database initialization
+Install required gems:
+```
+$ bundle install
+```
 
-* How to run the test suite
+Run Postgres:
+```
+$ postgres
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Navigate to project file and migrate database:
+```
+$ rake db: create
+$ rake db: migrate
+$ rake db: seed
+```
 
-* Deployment instructions
+Start the Rails webserver:
+```
+$ rails server
+```
 
-* ...
+Navigate to `localhost:3000` in your browser of choice.
+
+License
+-------
+_This software is licensed under the MIT license._<br>
+Copyright (c) 2016 **Stephanie Gurung & Meaghan Jones**
